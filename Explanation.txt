@@ -1,0 +1,61 @@
+# "uvicorn main:app --reload" to run api
+# http://127.0.0.1:8000 to get api endpoint. 
+# /docs to get swagger UI /redoc to get REDOC UI
+
+
+# Features: 
+"""
+1. Automatic Documentation
+2. Std Python3
+3. Security and Authentication
+4. Dependency Injection
+5. Testing - 100% coverage
+"""
+
+operation, endpoint, operation function
+
+# Query parameters: 
+# parameters in function which is not used in endpoint.
+# to be used in url with ?param=value
+
+# order of endpoints is important.
+# tags: used to logically categorize endpoints
+# summary & description: info regarding operation. 
+# This shows up in swagger UI. Docstring in function also shows up as description.
+# response description
+
+# Routers: 
+# seperate opeerations into multiple files.
+# share a prefix between multiple operations.
+# share tags.
+
+
+--> Request Body: 
+post method
+Pydantic BaseModel
+fastapi will convert the data (Reads request body json, data validation, data conversion, json schema as output)
+
+--> Parameter Metadata: 
+Information displayed in docs
+Using the Query, Path and Body imports
+Set default value
+Add title and description, alias
+
+--> Validator:
+Validate data passed to parameters.
+Provide a default value.
+Require a value (non-optional parameter) with ... or Ellipsis
+Require minimum length min_length = 10, max_length, regex
+
+--> Providing multiple values for 
+- query parameters
+- define an optional query parameter
+- provide default value
+
+--> Number Validators: 
+gt, ge, lt, le
+
+--> Complex Subtypes:
+List[str], Dict[str,str]
+similarly dict, set,tuple etc.
+custom model subtypes: like BlogModel
