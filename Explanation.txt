@@ -59,3 +59,18 @@ gt, ge, lt, le
 List[str], Dict[str,str]
 similarly dict, set,tuple etc.
 custom model subtypes: like BlogModel
+
+
+--> Database Checklist
+
+Database definition - database.Py
+Model definition - models.Py
+Create Database - main.Py
+Schema definition - schemas.Py
+ORM Functionality - db_user.Py
+API Functionality - user.Py
+
+--> Relationship: 
+Retrieve elements from multiple tables in a single request.
+Define Relationship in models
+Add the elements we want to Retrieve in schemas.
