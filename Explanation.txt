@@ -74,3 +74,18 @@ API Functionality - user.Py
 Retrieve elements from multiple tables in a single request.
 Define Relationship in models
 Add the elements we want to Retrieve in schemas.
+
+
+--> Concepts:
+1. Error Handling:
+    - notify client of an error.
+    - Raising exception stops execution of program.
+    - will contain status and exception msg.
+    - custom exception must inherit from Exception.
+    - provide exception handler
+2. Custom Responses
+3. Headers
+4. Cookies
+5. form data
+6. CORS
+
