@@ -101,5 +101,8 @@ Add the elements we want to Retrieve in schemas.
     - used to store information on browser
     - can accept str,list, dict, models etc.
 5. form data
+    - HTML form data  <form>..</form>
+    - application/x-www-form-urlencoded
+    - install python-multipart
 6. CORS
 
