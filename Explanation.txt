@@ -83,7 +83,15 @@ Add the elements we want to Retrieve in schemas.
     - will contain status and exception msg.
     - custom exception must inherit from Exception.
     - provide exception handler
-2. Custom Responses
+2. Custom Responses:
+    - std response is a model, list, dict, database model.
+    - we can customize the response object.
+    - no data conversion.
+    why? 
+    - add parameters: headers, Cookies
+    - different types of response - plain text, xml, html, files, streaming
+    - complex decisional logic
+    - better docs
 3. Headers
 4. Cookies
 5. form data
