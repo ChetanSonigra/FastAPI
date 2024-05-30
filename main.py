@@ -1,6 +1,7 @@
 
 from fastapi import FastAPI,status, Response, Request,HTTPException
 from fastapi.responses import JSONResponse, PlainTextResponse
+from fastapi.middleware.cors import CORSMiddleware
 from enum import Enum
 from typing import Optional
 from router import blog_get, blog_post,users,articles,products
@@ -39,3 +40,13 @@ def http_exception_handler(request: Request, exc: HTTPException):
 
 models.Base.metadata.create_all(engine)
 
+origins = [
+    'http://localhost:3000'
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = origins,
+    allow_credentials= True,
+    allow_methods = ["*"],
+    allow_headers = ["*"]
+)
