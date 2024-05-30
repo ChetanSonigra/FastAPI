@@ -98,6 +98,8 @@ Add the elements we want to Retrieve in schemas.
     - List of headers
     - Provide custom response headers
 4. Cookies
+    - used to store information on browser
+    - can accept str,list, dict, models etc.
 5. form data
 6. CORS
 
