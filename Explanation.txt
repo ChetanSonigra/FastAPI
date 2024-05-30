@@ -93,6 +93,10 @@ Add the elements we want to Retrieve in schemas.
     - complex decisional logic
     - better docs
 3. Headers
+    - Add headers in request function definition
+    - Automatic conversion between _ and -
+    - List of headers
+    - Provide custom response headers
 4. Cookies
 5. form data
 6. CORS
