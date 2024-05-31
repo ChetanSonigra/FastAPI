@@ -117,3 +117,18 @@ Add the elements we want to Retrieve in schemas.
       2. make a request to get token using username and password
       3. use token to make secure requests.
     - to generate random secret key: openssl rand -hex 32
+
+
+--> Working with files:
+1. File:
+    - declared similar to form fields.
+    - received as bytes.
+    - stored in memory. so limited space.
+2. UploadFile: 
+    - provides more Functionality
+    - stored in memory upto certain size, then on disk
+    - python file like object
+3. Making file statically available from browser
+4. Download files:
+    - provide more logic around file access
+    - provide Security

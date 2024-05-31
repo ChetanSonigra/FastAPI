@@ -4,11 +4,12 @@ from fastapi.responses import JSONResponse, PlainTextResponse
 from fastapi.middleware.cors import CORSMiddleware
 from enum import Enum
 from typing import Optional
-from router import blog_get, blog_post,users,articles,products
+from router import blog_get, blog_post,users,articles,products,file
 from auth import authentication
 from db import models
 from db.database import engine
 from exceptions import StoryException
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 app.include_router(blog_get.router)
@@ -17,6 +18,7 @@ app.include_router(users.router)
 app.include_router(articles.router)
 app.include_router(products.router)
 app.include_router(authentication.router)
+app.include_router(file.router)
 
 @app.get('/hello')             # get = operation, ('/') = endpoint
 def index():                   # operation function
@@ -52,3 +54,6 @@ app.add_middleware(
     allow_methods = ["*"],
     allow_headers = ["*"]
 )
+
+app.mount("/files",StaticFiles(directory="files"),name="files")
+# can access files from browser. http://127.0.0.1:8000/files/pydantic2.png
