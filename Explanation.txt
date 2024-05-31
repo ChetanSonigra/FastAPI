@@ -152,3 +152,11 @@ Add the elements we want to Retrieve in schemas.
     - easy with requests and pytest library
 4. Logging:
     - create custom_log.py and a function to write log
+
+
+--> Concurrency: 
+    - Functionality can be asynchronous.
+    - we don't want execution to block.
+    - await means process can be paused.
+    - async defines a function with suspendable points.
+    - async await keywords.
