@@ -150,4 +150,5 @@ Add the elements we want to Retrieve in schemas.
     - supports maintanability and scalability
     - strive for 100% coverage
     - easy with requests and pytest library
-4. Logging
+4. Logging:
+    - create custom_log.py and a function to write log
