@@ -143,6 +143,8 @@ Add the elements we want to Retrieve in schemas.
     - deployed on Render - https://fastapi-app-9e3e.onrender.com/docs
     - guide for render: https://docs.render.com/deploy-fastapi
 2. Debugging:
-    - 
+    - stop the server if running.
+    - view--> comman pallete--> Debug:Restart-->python-->fastapi launch and Debug
+    - add break points to code and monitor/test execution.
 3. Testing
 4. Logging
