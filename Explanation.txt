@@ -160,3 +160,14 @@ Add the elements we want to Retrieve in schemas.
     - await means process can be paused.
     - async defines a function with suspendable points.
     - async await keywords.
+
+--> Templates:
+    - Provide ready made html and css content
+    - Any templating engine
+
+
+--> middleware:
+    - function that intercepts request and response
+    - access to all related info
+    - processing before and after request
+    - common functionality for all endpoints

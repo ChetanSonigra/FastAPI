@@ -11,6 +11,7 @@ from db.database import engine
 from exceptions import StoryException
 from fastapi.staticfiles import StaticFiles
 from templates import templates
+import time
 
 app = FastAPI()
 app.include_router(blog_get.router)
@@ -45,6 +46,16 @@ def http_exception_handler(request: Request, exc: HTTPException):
                              content=str(exc))
 
 models.Base.metadata.create_all(engine)
+
+
+@app.middleware("http")
+async def add_middleware(request: Request, call_next):
+    start_time = time.perf_counter()
+    response = await call_next(request)
+    duration = time.perf_counter() - start_time
+    response.headers["duration"] = str(duration)
+    return response
+
 
 origins = [
     'http://localhost:3000'
