@@ -146,5 +146,8 @@ Add the elements we want to Retrieve in schemas.
     - stop the server if running.
     - view--> comman pallete--> Debug:Restart-->python-->fastapi launch and Debug
     - add break points to code and monitor/test execution.
-3. Testing
+3. Testing:
+    - supports maintanability and scalability
+    - strive for 100% coverage
+    - easy with requests and pytest library
 4. Logging
