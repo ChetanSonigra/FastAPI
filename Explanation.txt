@@ -132,3 +132,17 @@ Add the elements we want to Retrieve in schemas.
 4. Download files:
     - provide more logic around file access
     - provide Security
+
+
+--> Tasks:
+1. Deployment:
+    - free hosting with deta 
+    - minimal application: main.py, requirements.text
+    - space login, space new
+    or
+    - deployed on Render - https://fastapi-app-9e3e.onrender.com/docs
+    - guide for render: https://docs.render.com/deploy-fastapi
+2. Debugging:
+    - 
+3. Testing
+4. Logging
