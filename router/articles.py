@@ -7,7 +7,7 @@ from auth.oauth2 import oauth2schema, get_current_user
 from schemas import UserBase, UserDisplay, User
 
 
-router = APIRouter(prefix='/artilce',tags=['article'])
+router = APIRouter(prefix='/article',tags=['article'])
 
 @router.post('/',response_model=ArticleDisplay)
 def create_article(request: ArticleBase,db: Session = Depends(get_db),current_user: UserBase = Depends(get_current_user)):
