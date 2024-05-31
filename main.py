@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from enum import Enum
 from typing import Optional
 from router import blog_get, blog_post,users,articles,products
+from auth import authentication
 from db import models
 from db.database import engine
 from exceptions import StoryException
@@ -15,6 +16,7 @@ app.include_router(blog_post.router)
 app.include_router(users.router)
 app.include_router(articles.router)
 app.include_router(products.router)
+app.include_router(authentication.router)
 
 @app.get('/hello')             # get = operation, ('/') = endpoint
 def index():                   # operation function

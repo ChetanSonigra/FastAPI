@@ -107,3 +107,13 @@ Add the elements we want to Retrieve in schemas.
 6. CORS
     - cross origin resource sharing
     - localhost:8080 <---> localhost:8000 not allowed.
+
+
+--> Authentication:
+    - complex topic
+    - oauth2 with username and password
+    flow: 
+      1. user creates username and password
+      2. make a request to get token using username and password
+      3. use token to make secure requests.
+    - to generate random secret key: openssl rand -hex 32
