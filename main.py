@@ -10,6 +10,7 @@ from db import models
 from db.database import engine
 from exceptions import StoryException
 from fastapi.staticfiles import StaticFiles
+from templates import templates
 
 app = FastAPI()
 app.include_router(blog_get.router)
@@ -19,6 +20,7 @@ app.include_router(articles.router)
 app.include_router(products.router)
 app.include_router(authentication.router)
 app.include_router(file.router)
+app.include_router(templates.router)
 
 @app.get('/hello')             # get = operation, ('/') = endpoint
 def index():                   # operation function
@@ -57,3 +59,5 @@ app.add_middleware(
 
 app.mount("/files",StaticFiles(directory="files"),name="files")
 # can access files from browser. http://127.0.0.1:8000/files/pydantic2.png
+
+app.mount("/templates/static",StaticFiles(directory="templates/static"),name="static")
