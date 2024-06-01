@@ -171,3 +171,8 @@ Add the elements we want to Retrieve in schemas.
     - access to all related info
     - processing before and after request
     - common functionality for all endpoints
+
+--> Background Task:
+    - functionality to be run after the call has been completed.
+    - can have access to request and response.
+    - Use BackgroundTask
