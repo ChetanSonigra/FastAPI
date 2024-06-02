@@ -1,6 +1,6 @@
 
 from fastapi import FastAPI,status, Response, Request,HTTPException
-from fastapi.responses import JSONResponse, PlainTextResponse
+from fastapi.responses import JSONResponse, PlainTextResponse, HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from enum import Enum
 from typing import Optional
@@ -12,6 +12,8 @@ from exceptions import StoryException
 from fastapi.staticfiles import StaticFiles
 from templates import templates
 import time
+from fastapi.websockets import WebSocket
+from client import html
 
 app = FastAPI()
 app.include_router(blog_get.router)
@@ -32,6 +34,21 @@ def index():                   # operation function
 @app.post('/hello')
 def index2():
     return 'HI'
+
+@app.get("/")
+async def get():
+    return HTMLResponse(html)
+
+
+clients = []
+@app.websocket("/chat")
+async def websocket_endpoint(websocket: WebSocket):
+    await websocket.accept()
+    clients.append(websocket)
+    while True:
+        data = await websocket.receive_text()
+        for client in clients:
+            await client.send_text(data)
 
 
 @app.exception_handler(StoryException)

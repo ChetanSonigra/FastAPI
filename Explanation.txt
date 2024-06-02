@@ -176,3 +176,8 @@ Add the elements we want to Retrieve in schemas.
     - functionality to be run after the call has been completed.
     - can have access to request and response.
     - Use BackgroundTask
+
+--> WebSocket:
+    - protocol for two way communication over TCP/IP.
+    - keep connection open.
+    - from fastapi.websockes import WebSocket
