@@ -200,3 +200,7 @@ Add the elements we want to Retrieve in schemas.
 4. Global Dependencies:
     - Applies to all endpoints.
     - router/app
+
+--> OCR Application:
+    - Optical Character Recognition
+    - use of pytesserect module
