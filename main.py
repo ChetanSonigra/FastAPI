@@ -11,7 +11,7 @@ from db.database import engine
 from exceptions import StoryException
 from fastapi.staticfiles import StaticFiles
 from templates import templates
-import time
+import time, dependencies
 from fastapi.websockets import WebSocket
 from client import html
 
@@ -24,6 +24,7 @@ app.include_router(products.router)
 app.include_router(authentication.router)
 app.include_router(file.router)
 app.include_router(templates.router)
+app.include_router(dependencies.router)
 
 @app.get('/hello')             # get = operation, ('/') = endpoint
 def index():                   # operation function

@@ -1,0 +1,4 @@
+MyApp: No message
+	http://127.0.0.1:8000/dependencies?tag=MyApp&message=No%20message&separator=--
+MyApp: No message
+	http://127.0.0.1:8000/dependencies/new?tag=MyApp&message=No%20message&separator=--

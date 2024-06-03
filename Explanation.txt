@@ -181,3 +181,22 @@ Add the elements we want to Retrieve in schemas.
     - protocol for two way communication over TCP/IP.
     - keep connection open.
     - from fastapi.websockes import WebSocket
+
+
+--> Dependency:
+1. Dependencies:
+    - Declare required functionality.
+    - simple and intuitive in FASTAPI.
+    why?
+    - shared functionality
+    - database/resource connection
+    - Authentication
+    - minimize code duplication
+2. Class Dependencies:
+    - Any callable can be Dependency.
+    - classes
+3. Mutlilevel Dependencies:
+    - Dependencies can have Dependencies
+4. Global Dependencies:
+    - Applies to all endpoints.
+    - router/app
