@@ -48,7 +48,7 @@ def get_products(
                 "example": "<div>Product</div>"
             }
         },
-        "dependencies": "Returns html of an object."
+        "description": "Returns html of an object."
     },
     404: {
         "content": {
@@ -56,7 +56,7 @@ def get_products(
                 "example": "Product not available"
             }
         },
-        "dependencies": "A cleartext error message"
+        "description": "A cleartext error message"
     }
 })
 def get_product(id:int):
